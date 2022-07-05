@@ -1,0 +1,37 @@
+{
+    "id": "productform",
+    "schemaVersion": "1.1.0",
+    "name": "ProductForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "product_name",
+            "type": "string",
+            "label": "Product Name",
+            "readOnly": true,
+            "value": "${context.productDemo.PRODUCTNAME}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "units_in_stock",
+            "type": "integer",
+            "label": "Units In Stock",
+            "readOnly": false,
+            "value": "${context.productDemo.UNITSINSTOCK}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        }
+    ]
+}
